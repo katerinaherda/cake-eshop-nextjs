@@ -1,17 +1,28 @@
 import CartComponent from "./components/cart-component"
-import ProductItem from "./components/product-item"
-import productsList from "./data/models/products-list"
+import ProductItems from "./components/product-items"
 
-export default function Store() {
+export async function getData() {
+  const res = await fetch(
+    "https://raw.githubusercontent.com/Katerina8888/cake-fake-api/main/data.json",
+  )
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch data")
+  }
+
+  return res.json()
+}
+
+export default async function Store() {
+  const data = await getData()
+
   return (
-    <div className="min-h-screen">
-      <main className="max-w-[90%] lg:max-w-[85%] mb-[6rem] mx-auto">
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-8">
-          <ProductItem item={productsList} />
-        </div>
-      </main>
+    <>
+      <div className="grid grid-cols-2 lg:grid-cols-3 gap-8">
+        <ProductItems data={data} />
+      </div>
 
       <CartComponent />
-    </div>
+    </>
   )
 }
