@@ -34,7 +34,7 @@ export default function ProductItem({ product }: ProductItem) {
       />
       <div className="flex w-full justify-between mt-4">
         <span className="font-bold">{product.price} €</span>
-        <AddToCartButton product={product} />
+        <AddToCartButton clickedProduct={product} />
       </div>
     </div>
   )
