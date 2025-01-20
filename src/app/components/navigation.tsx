@@ -4,15 +4,16 @@ import Image from "next/image"
 import HamburgerMenu from "../../../public/icons/hamburger-menu"
 import CloseIcon from "../../../public/icons/close-icon"
 import MenuItems from "./menu-items"
+import Link from "next/link"
 
 export default function Navigation() {
   const [isNavOpen, setIsNavOpen] = useState(false)
 
   return (
     <nav className="mx-2 lg:mx-8 my-4 flex justify-between">
-      <a href="/">
+      <Link href="/">
         <Image src="/logo.png" alt="" width="60" height="60" />
-      </a>
+      </Link>
 
       <div className="relative lg:hidden">
         <button
