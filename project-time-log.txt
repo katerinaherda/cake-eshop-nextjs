@@ -4,4 +4,4 @@
 1: creating a shopping cart icon and hamburger menu
 2: creating a folder with model data file, connecting to the API, creating a new custom API with products for the shopping cart
 1: cart page
-10: functions and everything related to adding products to the shopping cart
+25: functions and everything related to adding products to the shopping cart
