@@ -22,12 +22,12 @@ body {
 
 img {
   max-width: 100%;
-  height: auto
+  height: auto;
 }
 
 @layer base {
   button {
-    @apply rounded-[10%] bg-orange-400 hover:bg-orange-500 py-[3px] px-[8px] text-white font-bold transition;
+    @apply rounded-[10%] bg-orange-400 hover:bg-orange-500 py-[2px] px-[3px] md:py-[3px] md:px-[8px] text-white text-base md:text-2xl font-bold transition;
   }
 }
 
