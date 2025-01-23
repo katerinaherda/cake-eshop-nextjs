@@ -16,11 +16,13 @@ export default function QuantityInput({ value, onChange }: QuantityInputProps) {
 
   return (
     <div>
-      <button className="w-[32px]" onClick={handleDecrease}>
+      <button className="w-[20px] md:w-[32px]" onClick={handleDecrease}>
         -
       </button>
-      <span className="inline-flex w-[2rem] justify-center">{value}</span>
-      <button className="w-[32px]" onClick={handleIncrease}>
+      <span className="inline-flex w-[1.5rem] md:w-[2rem] justify-center">
+        {value}
+      </span>
+      <button className="w-[20px] md:w-[32px]" onClick={handleIncrease}>
         +
       </button>
     </div>

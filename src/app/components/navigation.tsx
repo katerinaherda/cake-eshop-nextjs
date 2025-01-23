@@ -12,7 +12,7 @@ export default function Navigation() {
   return (
     <nav className="mx-2 lg:mx-8 my-4 flex justify-between">
       <Link href="/">
-        <Image src="/logo.png" alt="" width="60" height="60" />
+        <Image src="/logo.png" alt="" width="60" height="60" loading="lazy" />
       </Link>
 
       <div className="relative lg:hidden">

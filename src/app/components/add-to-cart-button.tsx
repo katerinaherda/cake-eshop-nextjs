@@ -39,7 +39,7 @@ export default function AddToCartButton({
   }
 
   return (
-    <div className="w-3/4 flex justify-end">
+    <div className="w-full md:w-3/4 flex justify-end whitespace-nowrap">
       {isClicked ? (
         <div className="flex items-center">
           <QuantityInput

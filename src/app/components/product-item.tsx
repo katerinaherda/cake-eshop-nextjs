@@ -1,4 +1,5 @@
 "use client"
+import Image from "next/image"
 import AddToCartButton from "./add-to-cart-button"
 
 export type Product = {
@@ -25,15 +26,16 @@ export default function ProductItem({ product }: ProductItem) {
         {truncate(product.title)}
       </h2>
 
-      <img
+      <Image
         className="w-[300px]"
         src={product.image}
         width="800"
         height="1200"
         alt=""
+        loading="lazy"
       />
       <div className="flex w-full justify-between mt-4">
-        <span className="font-bold">{product.price} €</span>
+        <span className="font-bold w-full">{product.price} €</span>
         <AddToCartButton clickedProduct={product} />
       </div>
     </div>
