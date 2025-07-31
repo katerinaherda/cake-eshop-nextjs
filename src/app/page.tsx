@@ -14,7 +14,7 @@ type Product = {
 
 async function fetchData() {
   const res = await fetch(
-    "https://raw.githubusercontent.com/Katerina8888/cake-fake-api/main/data.json",
+    "https://raw.githubusercontent.com/katerinaherda/cake-fake-api/main/data.json",
   )
 
   if (!res.ok) {
